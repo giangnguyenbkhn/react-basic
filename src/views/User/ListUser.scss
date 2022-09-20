@@ -1,0 +1,12 @@
+.list-user-content {
+    display: inline-block;
+    .child {
+        padding: 10px;
+        border-bottom: 1px solid;
+    }
+}
+
+.handleBack {
+    padding: 5px 10px;
+    cursor: pointer;
+}
