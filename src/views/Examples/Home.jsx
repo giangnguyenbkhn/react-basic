@@ -1,6 +1,7 @@
 import React from "react";
 // import { withRouter } from "react-router";
 import Color from "../HOC/Color";
+import logo from "../../assets/images/1.jpg";
 class Home extends React.Component {
   componentDidMount() {
     // setTimeout(() => {
@@ -11,7 +12,12 @@ class Home extends React.Component {
   }
   render() {
     console.log("check props", this.props);
-    return <div> Hello World from Homepage with giangnguyen </div>;
+    return (
+      <>
+        <div> Hello World from Homepage with giangnguyen </div>
+        <img src={logo} alt="" />
+      </>
+    );
   }
 }
 //HOC: higher order component

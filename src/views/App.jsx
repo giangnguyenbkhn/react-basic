@@ -16,7 +16,6 @@ import "react-toastify/dist/ReactToastify.css";
 // react co 2 loai component:class component/function component(function, arrow)
 //function App(){} va const App = () => {};
 //function component dung khi component k can phai xu li logic, class component nguoc lai
-//
 
 function App() {
   return (

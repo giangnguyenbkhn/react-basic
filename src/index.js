@@ -3,10 +3,20 @@ import ReactDOM from "react-dom";
 import "./styles/global.scss";
 import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
+//phai cau hinh redux ngay tai file root(file ban dau)
+//code lien quan den redux viet trong thu muc store
+import { Provider } from "react-redux";
+//provider ép được redux khởi động cùng react, riêng biệt,chạy song song
+import { createStore } from "redux";
+//createStore tạo ra 1 vùng dữ liệu store để nạp 1 thằng công nhân vào
+import rootReducer from "./store/reducers/rootReducer";
 
+const reduxStore = createStore(rootReducer);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
