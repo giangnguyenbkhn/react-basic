@@ -10,8 +10,9 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 //createStore tạo ra 1 vùng dữ liệu store để nạp 1 thằng công nhân vào
 import rootReducer from "./store/reducers/rootReducer";
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const reduxStore = createStore(rootReducer);
+const reduxStore = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={reduxStore}>
